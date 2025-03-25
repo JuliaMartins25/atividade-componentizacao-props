@@ -3,6 +3,7 @@ import Header from "./components/header/index";
 import Footer from "./components/footer/index";
 import HeroBanner from "./components/banner";
 import NewsLetter from "./components/newsletter";
+import Destaque from "./components/destaque";
 
 export default function Home() {
   // Dados que seriam obtidos de uma API
@@ -152,7 +153,7 @@ export default function Home() {
     <HeroBanner />
 
       {/* FEATURED BOOKS SECTION */}
-
+<Destaque />
 
       {/* CATEGORIES SECTION */}
       <section className={styles.categoriesSection}>
