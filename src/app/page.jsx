@@ -4,6 +4,7 @@ import Footer from "./components/footer/index";
 import HeroBanner from "./components/banner";
 import NewsLetter from "./components/newsletter";
 import Destaque from "./components/destaque";
+import Popular from "./components/popular";
 
 export default function Home() {
   // Dados que seriam obtidos de uma API
@@ -145,38 +146,17 @@ export default function Home() {
   return (
     <div className={styles.bookstoreContainer}>
 
-{/* HEADER */ }
-<Header />
-
+      {/* HEADER */}
+      <Header />
 
       {/* HERO BANNER */}
-    <HeroBanner />
+      <HeroBanner />
 
       {/* FEATURED BOOKS SECTION */}
-<Destaque />
+      <Destaque />
 
       {/* CATEGORIES SECTION */}
-      <section className={styles.categoriesSection}>
-        <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionHeading}>Categorias Populares</h2>
-          <a href="/categorias" className={styles.viewAll}>
-            Ver todas
-          </a>
-        </div>
-
-        <div className={styles.categoriesGrid}>
-          {categories.map((category) => (
-            <a
-              key={category.id}
-              href={`/categoria/${category.id}`}
-              className={styles.categoryCard}
-            >
-              <span className={styles.categoryIcon}>{category.icon}</span>
-              <span className={styles.categoryName}>{category.name}</span>
-            </a>
-          ))}
-        </div>
-      </section>
+      <Popular />
 
       {/* NEW RELEASES SECTION */}
       <section className={`${styles.bookSection} ${styles.newReleases}`}>
@@ -275,7 +255,7 @@ export default function Home() {
       </div>
 
       {/* FOOTER */}
-    <Footer />
+      <Footer />
 
       {/* OVERLAY */}
       <div className={styles.overlay}></div>
